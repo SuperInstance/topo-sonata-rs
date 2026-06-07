@@ -1,0 +1,9 @@
+[package]
+name = "topo-sonata-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Topological analysis of musical sonata form"
+license = "MIT"
+repository = "https://github.com/SuperInstance/topo-sonata-rs"
+
+[dependencies]
