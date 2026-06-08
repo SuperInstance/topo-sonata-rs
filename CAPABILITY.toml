@@ -1,0 +1,99 @@
+[crate]
+name = "topo-sonata-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Topological analysis of musical sonata form"
+license = "MIT"
+repository = "https://github.com/SuperInstance/topo-sonata-rs"
+language = "rust"
+test_count = 43
+
+[provides]
+capabilities = [
+    "sonata-form-structure",
+    "section-type-enumeration",
+    "section-timing-analysis",
+    "exposition-extraction",
+    "development-extraction",
+    "recapitulation-extraction",
+    "tonal-transition-mapping",
+    "circle-of-fifths-distance",
+    "key-change-classification",
+    "tonal-complexity",
+    "motivic-complex",
+    "vietoris-rips-complex",
+    "motivic-clustering",
+    "motivic-persistence",
+    "tension-landscape",
+    "tension-peak-detection",
+    "tension-valley-detection",
+    "tension-arc-integration",
+    "recapitulation-analysis",
+    "wasserstein-recapitulation",
+    "section-feature-extraction",
+    "key-fidelity-measure",
+    "duration-ratio-analysis",
+]
+
+[requires]
+dependencies = []
+
+[exports]
+modules = ["form", "motif", "recapitulation", "tension", "transition"]
+structs = [
+    "SonataForm",
+    "Section",
+    "SectionType",
+    "Motif",
+    "MotivicComplex",
+    "MotivicPersistencePair",
+    "TensionLandscape",
+    "TensionPoint",
+    "TonalPoint",
+    "TonalTransition",
+    "SectionFeatures",
+    "RecapitulationAnalysis",
+]
+functions = [
+    "Section::new",
+    "Section::duration",
+    "Section::contains_measure",
+    "SonataForm::new",
+    "SonataForm::standard",
+    "SonataForm::total_measures",
+    "SonataForm::exposition",
+    "SonataForm::development",
+    "SonataForm::recapitulation",
+    "SonataForm::section_at_measure",
+    "SonataForm::exposition_proportion",
+    "SonataForm::development_proportion",
+    "Motif::new",
+    "Motif::distance",
+    "MotivicComplex::build",
+    "MotivicComplex::num_components",
+    "MotivicComplex::euler_characteristic",
+    "motivic_persistence",
+    "cluster_motifs",
+    "TensionLandscape::new",
+    "TensionLandscape::from_sonata",
+    "TensionLandscape::tension_at",
+    "TensionLandscape::max_tension",
+    "TensionLandscape::min_tension",
+    "TensionLandscape::average_tension",
+    "TensionLandscape::peaks",
+    "TensionLandscape::valleys",
+    "TensionLandscape::tension_arc",
+    "TonalPoint::new",
+    "TonalPoint::circle_distance",
+    "TonalPoint::distance",
+    "compute_transition",
+    "transition_map",
+    "total_tonal_distance",
+    "classify_transition",
+    "tonal_complexity",
+    "SectionFeatures::from_section",
+    "SectionFeatures::distance",
+    "wasserstein_distance",
+    "analyze_recapitulation",
+    "compare_sections",
+]
